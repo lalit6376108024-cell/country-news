@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: country-news-desk
+    runtime: static
+    staticPublishPath: docs
+    autoDeploy: true
+    headers:
+      - path: /data/*
+        name: Cache-Control
+        value: no-cache
